@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public Text ammoText;
+    public TMP_Text ammoText;
     public BombShooter shooter;
 
     void Update()
