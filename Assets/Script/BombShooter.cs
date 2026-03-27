@@ -9,11 +9,22 @@ public class BombShooter : MonoBehaviour
     public int maxAmmo = 5;
     public int currentAmmo;
 
+    public AudioClip reloadSound;
+    private AudioSource audioSource;
+
+    public bool canReload = true;
+
     public float cooldown = 0.5f;
     private bool canShoot = true;
 
     void Start()
     {
+
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
         currentAmmo = maxAmmo;
     }
 
@@ -25,9 +36,9 @@ public class BombShooter : MonoBehaviour
             StartCoroutine(Cooldown());
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && canReload && currentAmmo < 5)
         {
-            Reload();
+            StartCoroutine(ReloadCooldown());
         }
     }
 
@@ -43,6 +54,17 @@ public class BombShooter : MonoBehaviour
         currentAmmo--;
     }
 
+    IEnumerator ReloadCooldown()
+    {
+        canReload = false;
+
+        Reload();
+
+        yield return new WaitForSeconds(2f);
+
+        canReload = true;
+    }
+
     IEnumerator Cooldown()
     {
         canShoot = false;
@@ -52,6 +74,13 @@ public class BombShooter : MonoBehaviour
 
     void Reload()
     {
+        if (reloadSound != null)
+        {
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            audioSource.PlayOneShot(reloadSound);
+        }
+        AudioSource.PlayClipAtPoint(reloadSound, transform.position);
+
         currentAmmo = maxAmmo;
     }
 }

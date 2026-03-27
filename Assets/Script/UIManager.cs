@@ -8,6 +8,13 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        ammoText.text = "Bomb: " + shooter.currentAmmo + "/5";
+        string ammoDisplay = "Bomb: " + shooter.currentAmmo + "/5";
+
+        if (!shooter.canReload)
+        {
+            ammoDisplay += "\n<color=yellow>Reloading...</color>";
+        }
+
+        ammoText.text = ammoDisplay;
     }
 }

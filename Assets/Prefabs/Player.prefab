@@ -288,6 +288,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2035753225061208787}
   maxAmmo: 5
   currentAmmo: 5
+  reloadSound: {fileID: 8300000, guid: 8929e07f524f3d34183ca18f3bde2be2, type: 3}
   cooldown: 0.5
 --- !u!1 &6619375951293270225
 GameObject:

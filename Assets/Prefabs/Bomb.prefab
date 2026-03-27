@@ -158,6 +158,7 @@ MonoBehaviour:
   radius: 5
   force: 50
   explosionFX: {fileID: 100012, guid: 3364c97de68d3a147af572d1c71c6455, type: 3}
+  explosionSound: {fileID: 8300000, guid: 48aefce27fbdcef46932a4b9f5120de6, type: 3}
 --- !u!1 &5613470490677934682
 GameObject:
   m_ObjectHideFlags: 0
