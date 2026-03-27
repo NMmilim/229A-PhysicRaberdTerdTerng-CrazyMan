@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 6151754669042854426}
   - component: {fileID: 3268120296339035566}
   - component: {fileID: 9068858478654162844}
+  - component: {fileID: 417132635988355505}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -289,7 +290,22 @@ MonoBehaviour:
   maxAmmo: 5
   currentAmmo: 5
   reloadSound: {fileID: 8300000, guid: 8929e07f524f3d34183ca18f3bde2be2, type: 3}
+  canReload: 1
   cooldown: 0.5
+--- !u!114 &417132635988355505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3713169658128122668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86307cb7856aefe469109ccd24e73e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RestartGame
+  restartDelay: 3
+  restartText: {fileID: 0}
 --- !u!1 &6619375951293270225
 GameObject:
   m_ObjectHideFlags: 0
