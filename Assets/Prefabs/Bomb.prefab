@@ -101,7 +101,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43107589748243517}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ed021b90c9d01b2469cbe54e35c5d92f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -141,7 +141,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-4527328420699401078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,9 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
   delay: 2
   radius: 5
-  force: 50
+  force: 100
   explosionFX: {fileID: 100012, guid: 3364c97de68d3a147af572d1c71c6455, type: 3}
   explosionSound: {fileID: 8300000, guid: 48aefce27fbdcef46932a4b9f5120de6, type: 3}
+  fuseSound: {fileID: 8300000, guid: aa4d7c868952a4c4a954d8f912523229, type: 3}
 --- !u!1001 &4394243826770756230
 PrefabInstance:
   m_ObjectHideFlags: 0

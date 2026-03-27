@@ -13,6 +13,8 @@ public class BombShooter : MonoBehaviour
     private AudioSource audioSource;
 
     public bool canReload = true;
+    public bool Reloaded = true;
+    private bool isReloading = false;
 
     public float cooldown = 0.5f;
     private bool canShoot = true;
@@ -30,13 +32,14 @@ public class BombShooter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canShoot && currentAmmo > 0)
+        // can't shoot when reload
+        if (Input.GetKeyDown(KeyCode.Space) && canShoot && currentAmmo > 0 && !isReloading)
         {
             Shoot();
             StartCoroutine(Cooldown());
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && canReload && currentAmmo < 5)
+        if (Input.GetKeyDown(KeyCode.R) && canReload && currentAmmo < maxAmmo && !isReloading)
         {
             StartCoroutine(ReloadCooldown());
         }
@@ -54,22 +57,37 @@ public class BombShooter : MonoBehaviour
         currentAmmo--;
     }
 
+
     IEnumerator ReloadCooldown()
     {
+        isReloading = true;
         canReload = false;
 
-        Reload();
+        if (reloadSound != null)
+        {
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            audioSource.PlayOneShot(reloadSound);
+        }
 
         yield return new WaitForSeconds(2f);
 
+        currentAmmo = maxAmmo;
+
+        isReloading = false;
         canReload = true;
+
+        canShoot = true;
     }
 
     IEnumerator Cooldown()
     {
         canShoot = false;
+
         yield return new WaitForSeconds(cooldown);
-        canShoot = true;
+
+        // ❗ ถ้ายัง reload อยู่ ห้ามเปิดยิง
+        if (!isReloading)
+            canShoot = true;
     }
 
     void Reload()
@@ -79,8 +97,8 @@ public class BombShooter : MonoBehaviour
             audioSource.pitch = Random.Range(0.8f, 1.2f);
             audioSource.PlayOneShot(reloadSound);
         }
-        AudioSource.PlayClipAtPoint(reloadSound, transform.position);
-
         currentAmmo = maxAmmo;
+                    canShoot = true;
+
     }
 }

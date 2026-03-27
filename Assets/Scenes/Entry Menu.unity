@@ -1987,7 +1987,7 @@ Transform:
   m_GameObject: {fileID: 976280318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 358.54532, y: 375.83887, z: 0}
+  m_LocalPosition: {x: 358.54532, y: 375.83887, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27cb9fe0dd6cd19438201e836a9a5800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonMananger
-  startGame: Game
+  startGame: Level_1
 --- !u!1001 &1013701664
 PrefabInstance:
   m_ObjectHideFlags: 0
