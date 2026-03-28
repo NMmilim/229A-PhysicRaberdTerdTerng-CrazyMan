@@ -687,7 +687,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1001 &289006536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -922,8 +921,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d7b460c6685037e4e8924c22bb44e4ff, type: 3}
   m_PrefabInstance: {fileID: 289950910}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 1f6cdf50f292cdbcf32b61ff42a9c68cca3bb308
 --- !u!1001 &296784542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1210,7 +1207,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 514254387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &456484031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1244,7 @@ Transform:
   - {fileID: 1228007436}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
+
 --- !u!1001 &509253521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,7 +1302,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837f119f731dd094985f0bb91a3716c1, type: 3}
->>>>>>> 1f6cdf50f292cdbcf32b61ff42a9c68cca3bb308
 --- !u!1 &514254386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,13 +3104,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8146947722577180889, guid: 75ed50d25f1f407458e9d48c36228c09, type: 3}
-<<<<<<< HEAD
 --- !u!4 &1401514976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 75ed50d25f1f407458e9d48c36228c09, type: 3}
   m_PrefabInstance: {fileID: 1846078563}
   m_PrefabAsset: {fileID: 0}
-=======
+
 --- !u!1 &1481512428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3255,7 +3249,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481512428}
   m_CullTransparentMesh: 1
->>>>>>> 1f6cdf50f292cdbcf32b61ff42a9c68cca3bb308
 --- !u!1 &1613625032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,10 +4492,9 @@ SceneRoots:
   - {fileID: 514254387}
   - {fileID: 343214502}
   - {fileID: 1705519485}
-<<<<<<< HEAD
   - {fileID: 456484032}
   - {fileID: 1722593868}
-=======
+
   - {fileID: 2075768670}
   - {fileID: 1846078563}
   - {fileID: 1782686910}
@@ -4512,4 +4504,3 @@ SceneRoots:
   - {fileID: 509253521}
   - {fileID: 542282149}
   - {fileID: 1342675433}
->>>>>>> 1f6cdf50f292cdbcf32b61ff42a9c68cca3bb308
