@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
   delay: 2
   radius: 5
-  force: 400
+  force: 800
   explosionFX: {fileID: 100012, guid: 3364c97de68d3a147af572d1c71c6455, type: 3}
   explosionSound: {fileID: 8300000, guid: 48aefce27fbdcef46932a4b9f5120de6, type: 3}
   fuseSound: {fileID: 8300000, guid: aa4d7c868952a4c4a954d8f912523229, type: 3}

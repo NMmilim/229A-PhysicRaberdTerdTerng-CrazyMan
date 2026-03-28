@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MenuButtonMananger : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private string startGame = "Level_1";
+    [SerializeField] private string startGame = "Level1";
     public void StartGameButton()
     {
         if (!string.IsNullOrEmpty(startGame))
@@ -15,11 +15,6 @@ public class MenuButtonMananger : MonoBehaviour
         {
             Debug.LogError("Scene name is empty!");
         }
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 
 }
