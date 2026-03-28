@@ -62,7 +62,6 @@ public class Bomb : MonoBehaviour
 
                 if (rb == null)
                     rb = hit.gameObject.AddComponent<Rigidbody>();
-
                 rb.isKinematic = false;
                 rb.linearDamping = 0.5f;
 
